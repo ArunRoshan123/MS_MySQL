@@ -132,3 +132,9 @@ select deptId, sum(empSalary) as 'Total Salary' from employee_info group by dept
 select deptId, sum(empSalary) as 'Total Salary' from employee_info group by deptId having sum(empSalary) > 100000;
 
 select deptId, sum(empSalary) as 'Total Salary' from employee_info where deptId = 11 group by deptId;
+
+
+Top Clause
+
+select top(3) empSalary from employee_info order by empSalary desc;
+select top(3) empSalary from employee_info order by empSalary; /*asc*/
