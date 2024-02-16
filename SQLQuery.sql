@@ -114,3 +114,13 @@ select * from employee_info
 Date & Time Function
 
 select getdate(), current_timestamp, sysdatetime(), datename(month, current_timestamp), datename(year, current_timestamp), datediff(year, '1995', current_timestamp), dateadd(year, 100, current_timestamp);
+
+insert into employee_info values(03,'Dhanush',540000,'SFE Developer','23456',10,'dhaush21@gmail.com','Dhanush12');
+insert into employee_info values(04,'Sunil',55000,'SDE.Developer','97638',11,'sunil987@gmail.com','Sunil321'); 
+insert into employee_info values(05,'Prakar',61000,'Java Developer','68238',11,'prakar@gmail.com','Prakar45'); 
+insert into employee_info values(06,'Harshit',62322,'FED','93455',12,'harshit@gmail.com','Harshit1995'); 
+
+Group By Clause
+
+select deptId from employee_info group by deptId;
+select deptId, round(avg(empSalary), 2) from employee_info group by deptId; 
