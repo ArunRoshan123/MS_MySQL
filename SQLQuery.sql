@@ -92,3 +92,21 @@ alter table employee_info add password varchar(40) ;
 
 update employee_info set email ='arun234@gmail.com', password= 'Arun123' where empId = 1;
 update employee_info set email = 'roshan234@gmail.com', password = 'Roshan123' where empId = 2;
+
+Boolean operators
+
+select * from employee_info 
+	where email = 'arun234@gmail.com'
+	and password = 'Arun123';
+
+
+select * from employee_info 
+	where email = 'arun234@gmail.com'
+	or empName = 'Arun';
+
+
+select * from employee_info 
+	where not empName = 'Arun';
+
+select * from employee_info 
+	where empName != 'Arun';
