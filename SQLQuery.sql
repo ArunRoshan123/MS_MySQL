@@ -110,3 +110,7 @@ select * from employee_info
 
 select * from employee_info 
 	where empName != 'Arun';
+
+Date & Time Function
+
+select getdate(), current_timestamp, sysdatetime(), datename(month, current_timestamp), datename(year, current_timestamp), datediff(year, '1995', current_timestamp), dateadd(year, 100, current_timestamp);
