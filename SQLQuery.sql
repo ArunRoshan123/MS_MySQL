@@ -49,3 +49,17 @@ select min(empSalary) from employee_info;
 select max(empSalary) from employee_info; 
 select avg(empSalary) from employee_info; 
 select count(empSalary) from employee_info;
+
+Numeric Functions
+
+select abs(-5);
+
+select ceiling(77.2);
+
+select floor(77.8); 
+
+select sign(10) , sign(-10), sign(0);
+
+select square(5), sqrt(64), pi(), cos(30), tan(45), sin(15), cot(90));
+
+select exp(1);
