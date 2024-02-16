@@ -28,3 +28,8 @@ Select * from employee_info;
 select empName from employee_info;
 
 select * from employee_info where empId = 1;
+
+update employee_info set job = '.net developer' where empName = 'Arun';
+update employee_info set job = 'Software Developer' where empName = 'Arun';
+
+Select * from employee_info;
