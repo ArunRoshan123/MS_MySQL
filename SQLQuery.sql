@@ -36,3 +36,8 @@ Select * from employee_info;
 
 delete from employee_info where empid = 3;
 Select * from employee_info;
+
+Order BY
+
+select * from employee_info order by empSalary asc;
+select * from employee_info order by empSalary desc;
