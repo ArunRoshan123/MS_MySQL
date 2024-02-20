@@ -227,7 +227,6 @@ employee_info left join department_info on employee_info.deptId = department_inf
 select e.empId,e.empName,e.empSalary,e.phone,d.depName,d.depLocation from 
 employee_info e left outer join department_info d on e.deptId = d.depId;
 
-*/
 
 /* right outer join */
 select empId,empName,empSalary,phone,depName,depLocation from 
@@ -235,3 +234,15 @@ employee_info right join department_info on employee_info.deptId = department_in
 
 select e.empId,e.empName,e.empSalary,e.phone,d.depName,d.depLocation from 
 employee_info e right join department_info d on e.deptId = d.depId;
+
+*/
+
+/* Full outer join*/
+
+select empId,empName,empSalary,phone,depName,depLocation from
+employee_info full outer join department_info on employee_info.deptId = department_info.depId;
+
+select e.empId,e.empName,e.empSalary,e.phone,d.depName,d.depLocation from
+employee_info e full join department_info d on e.deptId = d.depId;
+
+
