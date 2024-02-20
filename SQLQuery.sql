@@ -181,7 +181,6 @@ alter table emp_details alter column salary decimal(8,3);
 select empSalary as 'salary' from employee_info;
 select empSalary 'salary' from employee_info;
 
-*/
 
 alter table employee_info add deptId varchar(5); 
 
@@ -228,3 +227,11 @@ employee_info left join department_info on employee_info.deptId = department_inf
 select e.empId,e.empName,e.empSalary,e.phone,d.depName,d.depLocation from 
 employee_info e left outer join department_info d on e.deptId = d.depId;
 
+*/
+
+/* right outer join */
+select empId,empName,empSalary,phone,depName,depLocation from 
+employee_info right join department_info on employee_info.deptId = department_info.depId;
+
+select e.empId,e.empName,e.empSalary,e.phone,d.depName,d.depLocation from 
+employee_info e right join department_info d on e.deptId = d.depId;
