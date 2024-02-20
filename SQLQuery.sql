@@ -175,12 +175,47 @@ alter table emp_details alter column project_completed integer;
 alter table emp_details alter column salary decimal(8,2);
 alter table emp_details alter column salary decimal(8,3);
 
-*/
 
 /* Aliases - Can change column or table name temporarily */
 
 select empSalary as 'salary' from employee_info;
 select empSalary 'salary' from employee_info;
 
+*/
+
+alter table employee_info add deptId varchar(5); 
+
+insert into employee_info values(150,'Arun', 50000, 9963877, 'D1'); 
+insert into employee_info values(151,'Sunil', 52000, 9873877, 'D2'); 
+insert into employee_info values(152,'Dhanush', 51000, 9563877, 'D3'); 
+insert into employee_info values(153,'Roshan', 54000, 9343877, 'D2'); 
+insert into employee_info values(154,'Kumar', 53000, 8963877, 'D5'); 
 
 select * from employee_info;
+
+select * from department_info;
+
+alter table department_info alter column depId varchar(20);
+
+insert into department_info values('D1','Development','California');
+insert into department_info values('D2','Marketing','Mumbai');
+insert into department_info values('D3','Accounts','New York');
+insert into department_info values('D4','Management','Sydney');
+
+/*
+-- Joins --
+* Inner Join or simple or natural join
+* Outer Join
+  * left join
+  * right join
+  * full join
+* cross join
+*/
+
+/* Inner join */
+
+select empId,empName,empSalary,phone,depName,depLocation from 
+employee_info inner join department_info on employee_info.deptId = department_info.depId;
+
+select e.empId,e.empName,e.empSalary,e.phone,d.depName,d.depLocation from 
+employee_info e inner join department_info d on e.deptId = d.depId;
