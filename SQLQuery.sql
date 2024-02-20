@@ -1,3 +1,4 @@
+/*
 CREATE DATABASE employeeDB; 
 USE employeeDB;
 
@@ -138,3 +139,41 @@ Top Clause
 
 select top(3) empSalary from employee_info order by empSalary desc;
 select top(3) empSalary from employee_info order by empSalary; /*asc*/
+
+
+/* Alter Table How to ADD */
+
+create table emp_details(id int, name varchar(20));
+
+alter table emp_details add salary decimal;
+
+insert into emp_details values(01,'Arun',50000,11);
+
+alter table emp_details add phone_number varchar(10) null;
+
+/* alter using constraint */ 
+
+alter table emp_details add project_completed int not null default 0;
+
+alter table emp_details add projectId int null 
+constraint p_id unique;
+
+insert into emp_details values(02,'Roshan',60000,12,1,002);
+*/
+
+/* Alter command how to drop a column */
+
+alter table emp_details drop column phone_number; 
+
+/* Alter command how to drop a constraint from a column */
+
+alter table emp_details drop constraint p_id; 
+
+/* Alter command, how to change datatype */
+
+alter table emp_details alter column project_completed integer;
+
+alter table emp_details alter column salary decimal(8,2);
+alter table emp_details alter column salary decimal(8,3);
+
+select * from emp_details;
