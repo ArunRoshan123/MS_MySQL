@@ -159,7 +159,6 @@ alter table emp_details add projectId int null
 constraint p_id unique;
 
 insert into emp_details values(02,'Roshan',60000,12,1,002);
-*/
 
 /* Alter command how to drop a column */
 
@@ -176,4 +175,12 @@ alter table emp_details alter column project_completed integer;
 alter table emp_details alter column salary decimal(8,2);
 alter table emp_details alter column salary decimal(8,3);
 
-select * from emp_details;
+*/
+
+/* Aliases - Can change column or table name temporarily */
+
+select empSalary as 'salary' from employee_info;
+select empSalary 'salary' from employee_info;
+
+
+select * from employee_info;
